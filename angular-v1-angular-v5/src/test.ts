@@ -18,3 +18,8 @@ getTestBed().initTestEnvironment(
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);
+
+// Find all ng1 tests.
+const ng1Context = require.context('./', true, /\_test\.js$/);
+// Load the modules.
+ng1Context.keys().map(ng1Context);
