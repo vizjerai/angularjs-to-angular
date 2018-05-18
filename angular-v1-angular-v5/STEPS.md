@@ -4,13 +4,13 @@
 
 1. install angular cli v1.7.4
 
-```
+```bash
 yarn global add angular-cli
 ```
 
 2. in another directory
 
-```
+```bash
 ng new <project-name>
 ```
 
@@ -19,25 +19,25 @@ ng new <project-name>
 
 4. add ng1 dependencies
 
-```
+```bash
 yarn add angular@~1.5.0 angular-route@~1.5.0
 yarn add --dev angular-mocks@~1.5.0
 ```
 
 typescript types
-```
+```bash
 yarn add --dev @types/angular@~1.5.0 @types/angular-mocks@~1.5.0 @types/angular-route@~1.5.0
 ```
 
 5. install ng-upgrade
 
-```
+```bash
 yarn add @angular/upgrade@~5.2.0
 ```
 
 6. allow js to be imported in typescript
 
-```
+```json
 // tsconfig.json
 
 {
@@ -53,7 +53,7 @@ yarn add @angular/upgrade@~5.2.0
 
 7. export the main n1 module variable.
 
-```
+```javascript
 // from:
 angular.module('myApp', [
   ...
@@ -67,7 +67,7 @@ export const myApp = angular.module('myApp', [
 
 8. bootstrap ng1 app with ng2 app.
 
-```
+```typescript
 // src/main.ts
 ...
 import { setAngularJSGlobal } from '@angular/upgrade/static';
@@ -121,7 +121,7 @@ export class AppModule {
 
 example:
 
-```
+```javascript
 // src/app/ng1-app/app.js
 ...
 import 'angular-route';
@@ -134,7 +134,7 @@ import './components/version/version';
 
 10. Change `templateUrl` to `template` to allow template to be bundled together.
 
-```
+```javascript
 // src/appp/ng1-app/view1/view1.js
 ...
   $routeProvider.when('/view1', {
@@ -146,7 +146,7 @@ import './components/version/version';
 
 11. Add Angular router
 
-```
+```typescript
 // src/app/app.module.ts
 import { AppRoutingModule } from './app-routing.module';
 
@@ -188,7 +188,7 @@ export class AppRoutingModule { }
 
 12. Enable html5 mode for ng1 and remove default route.
 
-```
+```javascript
 // src/app/ng1-app/app.js
 ...
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
@@ -202,7 +202,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 
 13. Allow ng1 and ng2 routers to coexist
 
-```
+```typescript
 // src/app/app-routing.module.ts
 ...
 import { RouterModule, Routes, UrlHandlingStrategy } from '@angular/router';
@@ -251,7 +251,7 @@ export class CoexistingUrlHandlingStrategy implements UrlHandlingStrategy {
 
 14. Add Angular Component
 
-```
+```typescript
 // src/app/view3/view3.component.html
 // src/app/view3/view3.component.spec.ts
 // src/app/view3/view3.component.ts
@@ -292,7 +292,7 @@ const appRoutes: Routes = [
 
 15. Add ability for test runner to find ng1 tests.
 
-```
+```typescript
 // test.ts
 ...
 // Then we find all the tests.
@@ -310,7 +310,7 @@ ng1Context.keys().map(ng1Context);
 
 example:
 
-```
+```javascript
 // src/app/ng1-app/view1/view1_test.js
 'use strict';
 import 'angular'; // this is for angular-mocks
@@ -323,7 +323,7 @@ import './view1'; // location of angular module
 
 example:
 
-```
+```javascript
 // src/app/ng1-app/view1/view1_test.js
 // from:
   beforeEach(module('myApp.view1'));
