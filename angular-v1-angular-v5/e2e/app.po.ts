@@ -5,7 +5,15 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
+  clickLink(href) {
+    return element(by.css(`app-root [href="${href}"]`)).click();
+  }
+
+  getAppTitle() {
     return element(by.css('app-root h1')).getText();
+  }
+
+  getParagraphText() {
+    return element(by.css('app-root p:first-of-type')).getText();
   }
 }
