@@ -159,6 +159,12 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/upgrade@~5.2.0":
+  version "5.2.11"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-5.2.11.tgz#45b974a25aed4808fe66353d91787648c9a984a3"
+  dependencies:
+    tslib "^1.7.1"
+
 "@ngtools/json-schema@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngtools/json-schema/-/json-schema-1.2.0.tgz#06e5ecd29e9a37d260a447dd873ea2becd228c4f"
@@ -328,6 +334,18 @@ amqplib@^0.5.2:
     buffer-more-ints "0.0.2"
     readable-stream "1.x >=1.1.9"
     safe-buffer "^5.0.1"
+
+angular-mocks@~1.5.0:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.5.11.tgz#a0e1dd0ea55fd77ee7a757d75536c5e964c86f81"
+
+angular-route@~1.5.0:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular-route/-/angular-route-1.5.11.tgz#49614f3a167f54291e449fe8ba05d39c58924b83"
+
+angular@~1.5.0:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.11.tgz#8c5ba7386f15965c9acf3429f6881553aada30d6"
 
 ansi-html@0.0.7:
   version "0.0.7"
@@ -2829,6 +2847,10 @@ html-webpack-plugin@^2.29.0:
     lodash "^4.17.3"
     pretty-error "^2.0.2"
     toposort "^1.0.0"
+
+html5-boilerplate@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/html5-boilerplate/-/html5-boilerplate-5.3.0.tgz#6b9d98aa91bcd58bfc41f0a38c5da4242d641750"
 
 htmlparser2@~3.3.0:
   version "3.3.0"
