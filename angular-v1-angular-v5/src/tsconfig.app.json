@@ -7,6 +7,7 @@
     "types": []
   },
   "exclude": [
+    "app/create_angularjs_testing_module.ts",
     "test.ts",
     "**/*.spec.ts"
   ]

@@ -1,7 +1,7 @@
 'use strict';
 import 'angular-route';
 
-angular.module('myApp.view2', ['ngRoute'])
+export const view2 = angular.module('myApp.view2', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view2', {
