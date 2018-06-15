@@ -1,17 +1,28 @@
 # AngularJS to Angular Upgrade Path
 
-## angular-v1
+## Organization
+
+### angular-v1
 
 Basic AngularJS application from https://github.com/angular/angular-seed
 
-## angular-v1-angular-v5
+### angular-v1-angular-v5
 
 Hybrid application with tests for both AngularJS and Angular
 
 Steps taken can be found in [angular-v1-angular-v5/STEPS.md](./angular-v1-angular-v5/STEPS.md)
 
+### src
+
+Collection of scripts that have been useful for upgrading AngularJS to Angular.
+
 
 ## Notes
+
+- [AngularJS Components / Element Directives](#angularjs-components--element-directives)
+- [AngularJS Attribute Directives](#angularjs-attribute-directives)
+- [AngularJS Factory Provider for Angular](#angularjs-factory-provider-for-angular)
+- [Angular Service in AngularJS](#angular-service-in-angularjs)
 
 ### AngularJS Components / Element Directives
 
