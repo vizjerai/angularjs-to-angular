@@ -77,7 +77,7 @@ Usage in AngularJS
 
       import { FooFactory } from './fooFactory';
 
-      angular.module('ng1app').factory('fooFactory', FooFactory);
+      export const ng1app = angular.module('ng1app', []).factory('fooFactory', FooFactory);
 
 Usage in Angular
 
@@ -90,3 +90,21 @@ Usage in Angular
         ],
       })
       export class AppModule {}
+
+## Angular Service in AngularJS
+
+      @Injectable()
+      export class FooService { }
+
+      // add to Angular
+      @NgModule({
+        providers: [
+          FooService,
+        ],
+      })
+      export class AppModule {}
+
+      // add to AngularJS
+      import { downgradeInjectable } from '@angular/upgrade/static';
+
+      export const ng1app = angular.module('ng1app', []).factory(downgradeInjectable(FooService))
